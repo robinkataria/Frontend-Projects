@@ -1,0 +1,112 @@
+/* Normalizing CSS by Universal selector */
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+/* Parent element setup - Project wide */
+body {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400; /* normal */
+    font-size: 16px;
+    background-color: #f0f0f0f0;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width:280px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header, .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sso-button {
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 6px 0;
+    border-color:#D3D3D3;
+    border-width: 1px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sso-item-logo {
+    padding: 0 8px 0 0;
+    height: 12px; 
+}
+
+.userInput {
+    margin-top: 8px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 1px #006AFF;
+    padding: 2px 0px 2px 3px;
+    border: 1px solid #006AFF;
+}
+
+a {
+    color: #006AFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.submitButton {
+    width: 100%;
+    background-color: #006affbe;
+    color: white;
+    border-radius: 6px;
+    padding: 6px 0;
+    border-color:#D3D3D3;
+    border-width: 1px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+input[type=name], input[type=email], input[type=password] {
+    width: 100%;
+    border-radius: 6px;
+    padding: 6px 0;
+    border-color:#D3D3D3;
+    border-width: 1px;
+    margin: 2px 0;
+}
+
+hr {
+    /* display: block; */
+    margin: 16px auto;
+    /* border-style: inset; */
+    border-color:#e8e8e8;
+    border-width: 1px;
+
+  }

@@ -5,51 +5,54 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
         <title>Sign up</title>
     </head>
 
     <body>
-        <header>
-            <h1>Sign up</h1>
-        </header>
+        <div class="form">
+            <div class="header">
+                <h2>Sign up</h2>
+                <div class="sso">
+                    <button class="sso-button"><img src="images/google.png" alt="google_logo"  class="sso-item-logo"> Sign up with Google</button>
+                </div>
 
-        <main>
-            <div class="sso">
-                <button><img src="images/google.png" alt="google_logo" height="12px"> Sign up with Google</button>
+                <hr>
             </div>
-
-            <div class="userInput">
-
-                <div class="nameInput">
+            
+            <div class="main">
+                <div class="userInput">
                     <label for="name" style="display: block;">Name</label>
-                    <input type="name" name="name" id="name" placeholder="enter your name">
+                    <input type="name" name="name" id="name" autofocus="autofocus" placeholder=" enter your name">
                 </div>
 
-                <div class="emailInput">
+                <div class="userInput">
                     <label for="email" style="display: block;">Email</label>
-                    <input type="email" name="email" id="email" placeholder="example@mail.com">
+                    <input type="email" name="email" id="email" placeholder=" example@mail.com">
                 </div>
 
-                <div class="passwordInput">
+                <div class="userInput">
                     <label for="password" style="display: block;">Password</label>
-                    <input type="password" name="password" id="password" placeholder="at least 8 characters">
+                    <input type="password" name="password" id="password" placeholder=" at least 8 characters">
                 </div>
 
-                <div class="checkboxInput">
+                <div class="userInput">
                     <input type="checkbox" name="tnc" id="tnc">
                     <label for="tnc">I agree with <a href="">Terms</a> and <a href="">Privacy</a></label>
                 </div>    
             </div>
             
-            <div class="submitButton">
-                <button type="submit">Sign up</button>
-            </div
-        </main>
+            <button class="submitButton" type="submit">Sign up</button>
 
-        <footer>
-            <p>Already have an account?</p>
-            <a href="login.html">Log in</a>
-        </footer>
+            <hr>
+
+            <div class="footer">
+                <p>Already have an account?</p>
+                <a href="login.html">Log in</a>
+            </div>
+            
+        </div>
+            
     </body>
 
 </html>
