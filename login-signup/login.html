@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Log in</title>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-        <title>Log in</title>
-    </head>
+  <body>
+    <div class="outer_body">
+      <div class="form">
+        <div class="header hr_bottom">
+          <h2 class="form_heading">Log in</h2>
+          <img src="./images/cross.png" alt="Exit button" class="exit_btn" />
+          <div class="sso">
+            <button class="sso_button">
+              <img
+                src="./images/google.png"
+                alt="Google logo"
+                class="sso_button-logo"
+              />
+              Log in with Google
+            </button>
+          </div>
+        </div>
 
-    <body>
-        <header>
-            <h1>Log in</h1>
-        </header>
+        <div class="main hr_bottom">
+          <div class="user_input">
+            <label for="email" class="user_input-label">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@mail.com"
+              class="user_input-item"
+            />
+          </div>
 
-        <main>
-            <div class="sso">
-                <button class="sso-button"><img src="images/google.png" alt="google_logo" class="sso-item-logo"> Log in with Google</button>
-            </div>
+          <div class="user_input">
+            <label for="password" class="user_input-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="at least 8 characters"
+              class="user_input-item"
+            />
+          </div>
 
-            <hr>
+          <div class="user_input">
+            <input type="checkbox" name="save_pw" />
+            <label for="save_pw">
+              <span class="span_text"> Remember me </span>
+            </label>
+          </div>
 
-            <div>
-                <div class="userInput">
-                    <label for="email" style="display: block;">Email</label>
-                    <input type="email" name="email" id="email" autofocus="autofocus" placeholder=" example@mail.com">
-                </div>
+          <button class="submit_button" type="submit">Log in</button>
 
-                <div class="userInput">
-                    <label for="password" style="display: block;">Password</label>
-                    <input type="password" name="password" id="password" placeholder=" at least 8 characters">
-                </div>
+          <div class="reset_pw">
+            <a href="">Forgot Password?</a>
+          </div>
+        </div>
 
-                <div class="userInput">
-                    <input type="checkbox" name="rememberme" id="rememberme">
-                    <label for="rememberme">Remember me</label>
-                </div>    
-            </div>
-            
-            <div class="submitButton">
-                <button type="submit">Log in</button>
-            </div>
-
-            <div class="resetPassword">
-                <a href="">Forgot Password?</a>
-            </div>
-
-            <hr>
-            
-        </main>
-
-        <footer>
-            <p>Don't have an account?</p>
-            <a href="signup.html">Sign up</a>
-        </footer>
-    </body>
-
+        <div class="footer">
+          <span class="span_text">Don't have an account?</span>
+          <a href="./signup.html" class="login_signup_link">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

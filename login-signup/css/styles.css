@@ -1,112 +1,144 @@
 /* Normalizing CSS by Universal selector */
 * {
-    /* margin: 0;
-    padding: 0; */
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Parent element setup - Project wide */
-body {
-    font-family: Helvetica, sans-serif;
-    font-weight: 400; /* normal */
-    font-size: 16px;
-    background-color: #f0f0f0f0;
+html {
+  font-family: Helvetica, sans-serif;
+  font-weight: 400; /* normal */
+  font-size: 16px;
+}
 
-    height: 100vh;
+.outer_body {
+  background-color: #e7e7e7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.navbar {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .form {
-    width:280px;
-    padding: 16px;
-    background-color: white;
-    border-radius: 6px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 280px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.header, .main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.header,
+.main,
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .footer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  align-items: center;
 }
 
-.sso-button {
-    width: 100%;
-    background-color: white;
-    border-radius: 6px;
-    padding: 6px 0;
-    border-color:#D3D3D3;
-    border-width: 1px;
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.form_heading {
+  margin-bottom: 16px;
+  font-weight: 400;
 }
 
-.sso-item-logo {
-    padding: 0 8px 0 0;
-    height: 12px; 
+.sso_button {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 6px 0;
+  margin: 0 0 18px 0;
+  border: solid #e7e7e7 1px;
+  border-radius: 6px;
+  box-shadow: 0 0 1.5px #e7e7e7;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.userInput {
-    margin-top: 8px;
+.sso_button-logo {
+  padding: 0 8px 0 0;
+  height: 12px;
+}
+
+.exit_btn {
+  width: 24px;
+  position: absolute;
+  left: 225px;
+}
+
+.hr_bottom {
+  border-bottom: solid #e7e7e7 1px;
+  margin-bottom: 20px;
+}
+
+.user_input-label {
+  display: block;
+  padding: 0 0 6px 0;
+}
+
+.user_input-item {
+  width: 100%;
+  color: #585757;
+  margin: 0 0 12px 0;
+  border: solid #e7e7e7 1px;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+input::placeholder {
+  color: #969696;
 }
 
 input:focus {
-    outline: none;
-    box-shadow: 0 0 1px #006AFF;
-    padding: 2px 0px 2px 3px;
-    border: 1px solid #006AFF;
+  outline: none;
+  padding: 6px;
+  border: solid #0084ff 1.5px;
+  box-shadow: 0 0 1.5px #0084ff;
+}
+
+.submit_button {
+  width: 100%;
+  background-color: #0084ff;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 6px 0;
+  border: solid #e7e7e7 1px;
+  cursor: pointer;
+  margin: 16px 0;
+}
+
+.reset_pw {
+  text-align: center;
+  padding: 0 0 16px 0;
+}
+
+.span_text {
+  color: #585757;
+}
+
+.login_signup_link {
+  padding: 6px 0;
 }
 
 a {
-    color: #006AFF;
-    text-decoration: none;
-    cursor: pointer;
+  color: #0084ff;
+  text-decoration: none;
+  cursor: pointer;
 }
-
-.submitButton {
-    width: 100%;
-    background-color: #006affbe;
-    color: white;
-    border-radius: 6px;
-    padding: 6px 0;
-    border-color:#D3D3D3;
-    border-width: 1px;
-    cursor: pointer;
-    margin-top: 6px;
-}
-
-input[type=name], input[type=email], input[type=password] {
-    width: 100%;
-    border-radius: 6px;
-    padding: 6px 0;
-    border-color:#D3D3D3;
-    border-width: 1px;
-    margin: 2px 0;
-}
-
-hr {
-    /* display: block; */
-    margin: 16px auto;
-    /* border-style: inset; */
-    border-color:#e8e8e8;
-    border-width: 1px;
-
-  }
