@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <title>Log in</title>
+  </head>
+
+  <body>
+    <div class="outerbody">
+      <form action="./index.html" name="login" class="form">
+        <div class="header hr_bottom">
+          <h2 class="form__heading">Log in</h2>
+          <img
+            src="../../images/cross.png"
+            alt="Exit button"
+            class="exit_btn"
+          />
+          <div class="sso">
+            <button class="sso__button">
+              <img
+                src="../../images/google.png"
+                alt="Google logo"
+                class="sso__button__logo"
+              />
+              Log in with Google
+            </button>
+          </div>
+        </div>
+
+        <div class="main hr_bottom">
+          <div class="form__input form__input_email">
+            <label for="email" class="form__input__label">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@mail.com"
+              class="form__input__item"
+            />
+          </div>
+
+          <div class="form__input form__input_password">
+            <label for="password" class="form__input__label">Password</label>
+            <div class="form__input__fakeinput">
+              <input
+                type="password"
+                name="password"
+                placeholder="at least 8 characters"
+                class="form__input__item"
+                id="l_password"
+              />
+              <img
+                src="../../images/hide_password.png"
+                alt="View password"
+                class="form__input__viewpw"
+              />
+            </div>
+          </div>
+
+          <div class="form__input form__input_savepw statement">
+            <input type="checkbox" name="save_pw" />
+            <label for="save_pw">
+              <span class="span_text"> Remember me </span>
+            </label>
+          </div>
+
+          <button class="form__submit_btn" type="submit">Log in</button>
+
+          <div class="form__input__resetpw">
+            <a href="">Forgot Password?</a>
+          </div>
+        </div>
+
+        <div class="footer">
+          <span class="span_text statement">Don't have an account?</span>
+          <a href="../signup/index.html" class="login_signup_link">Sign up</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="../login/index.js"></script>
+  </body>
+</html>
