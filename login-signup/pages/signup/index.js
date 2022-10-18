@@ -1,22 +1,8 @@
 (() => {
-  const validateName = (name) => {
-    const re = /^([a-zA-Z]{1,4}\.)?([ a-zA-Z]{4,20})$/;
-    return re.test(name);
-  };
-
-  const validatePassword = (password) => {
-    const re = /^([\w!@#$%^&*()-]{8,20})$/;
-    return re.test(password);
-  };
-
-  const validateEmail = (email) => {
-    let re = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
-    return re.test(email);
-  };
-
-  const validateTnC = (tnc) => {
-    return tnc == "on";
-  };
+  const NAME_REGEX = /^([a-zA-Z]{1,4}\.)?([ a-zA-Z]{4,20})$/;
+  const PASSWORD_REGEX = /^([\w!@#$%^&*()-]{8,20})$/;
+  const EMAIL_REGEX =
+    /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
 
   document.addEventListener("DOMContentLoaded", () => {
     const crossBtn = document.querySelector(".exit_btn");
@@ -24,7 +10,7 @@
       window.location.href = "/login-signup/index.html";
     });
 
-    const viewPw = document.querySelector(".form__input__viewpw");
+    const viewPw = document.querySelector(".form__viewpw");
     viewPw.addEventListener("click", () => {
       const pw = document.getElementById("s_password");
       if (pw.type == "password") {
@@ -56,7 +42,7 @@
       const password = form["password"];
       const tnc = form["tnc"];
 
-      if (!validateName(name.value)) {
+      if (!NAME_REGEX.test(name.value)) {
         const name_error_div = document.createElement("div");
         name_error_div.textContent = "Invalid name!";
         name_error_div.classList.add("name_error", "error");
@@ -65,7 +51,7 @@
         parent_name_element.appendChild(name_error_div);
       }
 
-      if (!validateEmail(email.value)) {
+      if (!EMAIL_REGEX.test(email.value)) {
         const email_error_div = document.createElement("div");
         email_error_div.textContent = "Invalid email!";
         email_error_div.classList.add("email_error", "error");
@@ -75,7 +61,7 @@
         parent_email_element.appendChild(email_error_div);
       }
 
-      if (!validatePassword(password.value)) {
+      if (!PASSWORD_REGEX.test(password.value)) {
         const password_error_div = document.createElement("div");
         password_error_div.textContent = "Invalid password!";
         password_error_div.classList.add("password_error", "error");
@@ -86,7 +72,7 @@
         parent_password_element.appendChild(password_error_div);
       }
 
-      if (!validateTnC(tnc.value)) {
+      if (!tnc.checked) {
         const tnc_error_div = document.createElement("div");
         tnc_error_div.textContent = "Check this box if you agree to our T&C";
         tnc_error_div.classList.add("tnc_error", "error");
@@ -95,7 +81,7 @@
         parent_tnc_element.appendChild(tnc_error_div);
       }
 
-      console.log(name.value, email.value, password.value, tnc.value);
+      console.log(name.value, email.value, password.value, tnc.checked);
     });
   });
 })();

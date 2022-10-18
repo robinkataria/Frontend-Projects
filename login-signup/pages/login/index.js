@@ -1,13 +1,7 @@
 (() => {
-  const validatePassword = (password) => {
-    const re = /^([\w!@#$%^&*()-]{8,20})$/;
-    return re.test(password);
-  };
-
-  const validateEmail = (email) => {
-    let re = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
-    return re.test(email);
-  };
+  const PASSWORD_REGEX = /^([\w!@#$%^&*()-]{8,20})$/;
+  const EMAIL_REGEX =
+    /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
 
   document.addEventListener("DOMContentLoaded", () => {
     const crossBtn = document.querySelector(".exit_btn");
@@ -15,7 +9,7 @@
       window.location.href = "/login-signup/index.html";
     });
 
-    const viewPw = document.querySelector(".form__input__viewpw");
+    const viewPw = document.querySelector(".form__viewpw");
     viewPw.addEventListener("click", () => {
       const pw = document.getElementById("l_password");
       if (pw.type == "password") {
@@ -46,7 +40,7 @@
       const password = form["password"];
       const rememberMe = form["save_pw"];
 
-      if (!validateEmail(email.value)) {
+      if (!EMAIL_REGEX.test(email.value)) {
         const email_error_div = document.createElement("div");
         email_error_div.textContent = "Invalid email!";
         email_error_div.classList.add("email_error", "error");
@@ -56,7 +50,7 @@
         parent_email_element.appendChild(email_error_div);
       }
 
-      if (!validatePassword(password.value)) {
+      if (!PASSWORD_REGEX.test(password.value)) {
         const password_error_div = document.createElement("div");
         password_error_div.textContent = "Invalid password!";
         password_error_div.classList.add("password_error", "error");
@@ -67,7 +61,7 @@
         parent_password_element.appendChild(password_error_div);
       }
 
-      console.log(email.value, password.value, rememberMe.value);
+      console.log(email.value, password.value, rememberMe.checked);
     });
   });
 })();
