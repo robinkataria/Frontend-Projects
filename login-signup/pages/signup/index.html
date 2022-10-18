@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <title>Sign up</title>
+  </head>
+
+  <body>
+    <div class="outer_body">
+      <form name="signup" class="form">
+        <div class="header hr_bottom">
+          <h2 class="form__heading">Sign up</h2>
+          <img
+            src="../../images/cross.png"
+            alt="Exit button"
+            class="exit_btn"
+          />
+          <div class="sso">
+            <button class="sso__button">
+              <img
+                src="../../images/google.png"
+                alt="Google logo"
+                class="sso__logo"
+              />
+              Sign up with Google
+            </button>
+          </div>
+        </div>
+
+        <div class="main hr_bottom">
+          <div class="form__input form__input_name">
+            <label for="name" class="form__label">Name</label>
+            <input
+              type="name"
+              name="name"
+              autofocus="autofocus"
+              placeholder="enter your name"
+              class="form__item"
+            />
+          </div>
+
+          <div class="form__input form__input_email">
+            <label for="email" class="form__label">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@mail.com"
+              class="form__item"
+            />
+          </div>
+
+          <div class="form__input form__input_password">
+            <label for="password" class="form__label">Password</label>
+            <div class="form__fakeinput">
+              <input
+                type="password"
+                name="password"
+                placeholder="at least 8 characters"
+                class="form__item"
+                id="s_password"
+              />
+              <img
+                src="../../images/hide_password.png"
+                alt="View password"
+                class="form__viewpw"
+              />
+            </div>
+          </div>
+
+          <div class="form__input form__input_tnc statement">
+            <input type="checkbox" name="tnc" />
+            <label for="tnc">
+              <span class="span_text">
+                I agree with <a href="">Terms</a> and <a href="">Privacy</a>
+              </span>
+            </label>
+          </div>
+
+          <button class="form__submit_btn" type="submit">Sign up</button>
+        </div>
+
+        <div class="footer">
+          <span class="span_text statement">Already have an account?</span>
+          <a href="../login/index.html" class="login_signup_link">Log in</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="../signup/index.js"></script>
+  </body>
+</html>
