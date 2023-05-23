@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app" id="main">
+        <h1>To-Do List</h1>
+        <div class="row">
+          <input
+            type="text"
+            class="row-textbox"
+            id="taskInputBox"
+            autofocus
+            placeholder="Add your text"
+          />
+          <div>
+            <button class="row-btn row-btn-add" id="addBtn">Add</button>
+            <button class="row-btn row-btn-delete-all" id="removeAllBtn">
+              Clear list
+            </button>
+          </div>
+        </div>
+        <ul id="listOfTasks" class="list-container"></ul>
+      </div>
+    </div>
+  </body>
+</html>
